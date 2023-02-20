@@ -1,4 +1,4 @@
-. ## Item 24, 멤버 클래스는 되도록 static 으로 만들라
+## Item 24, 멤버 클래스는 되도록 static 으로 만들라
 
 클래스 in 클래스를 nested class 라고 하며, static 일 경우 static nested class, 아닐 경우 inner class
 
