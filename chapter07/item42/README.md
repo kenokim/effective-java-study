@@ -12,3 +12,20 @@ Functional interface 의 인스턴스를 lambda 로 작성하면 더 간결하�
 
 람다의 매개변수 타입은 생략할 수 있다. 컴파일러가 타입을 추론한다.
 
+람다는 코드가 길어지면 사용하지 않아야 한다.
+
+'''java
+public enum Operation {
+    PLUS("+", (x, y) -> x + y),
+    MINUS("-", (x, y) -> x - y),
+    TIMES("*", (x, y) -> x * y),
+    DIVIDE("/", (x, y) -> x / y);
+    private final String symbol;
+    private final DoubleBinaryOperator op;
+
+    Operation(String symbol, DoubleBinaryOperator op) {
+        this.symbol = symbol;
+        this.op = op;
+    }
+}
+'''
